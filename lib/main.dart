@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutrrter Demo Home Page'),
+      home: new MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
@@ -47,13 +47,37 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Padding(
                 padding: EdgeInsets.only(top: 10.0, bottom: 10.0),
-                child: Column(  // item
+                child: Column(
+                  // item
                   children: <Widget>[
                     Text(
                       "title" + "$index",
                       textAlign: TextAlign.start,
                     ),
                   ],
+                ),
+              ),
+              Container(
+                ///四周10大小的maring
+                margin: EdgeInsets.all(10.0),
+                alignment: Alignment.center,
+                height: 120.0,
+                width: 500.0,
+
+                ///透明黑色遮罩
+                decoration: new BoxDecoration(
+
+                    ///弧度为4.0
+                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
+
+                    ///设置了decoration的color，就不能设置Container的color。
+                    color: Colors.black12,
+
+                    ///边框
+                    border: new Border.all(color: Colors.blue, width: 0.3)),
+                child: new Text(
+                  "666666",
+                  textAlign: TextAlign.center,
                 ),
               ),
               Divider(),
