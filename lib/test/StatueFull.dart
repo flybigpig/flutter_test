@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class DemoStateWidget extends StatefulWidget {
-
   final String text;
 
   ////通过构造方法传值
@@ -14,7 +13,6 @@ class DemoStateWidget extends StatefulWidget {
 }
 
 class _DemoStateWidgetState extends State<DemoStateWidget> {
-
   String text;
 
   _DemoStateWidgetState(this.text);
@@ -23,6 +21,7 @@ class _DemoStateWidgetState extends State<DemoStateWidget> {
   void initState() {
     ///初始化，这个函数在生命周期中只调用一次
     super.initState();
+
     ///定时1秒
     new Future.delayed(const Duration(seconds: 1), () {
       setState(() {
