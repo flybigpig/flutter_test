@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/IndexPage/page/EachView.dart';
+import 'package:flutter_app/IndexPage/page/FrostedGlassDemo.dart';
+import 'package:flutter_app/IndexPage/page/SecondPage.dart';
+import 'package:flutter_app/route/CustomRoute.dart';
 
 class BottomAppBarDemo extends StatefulWidget {
   _BottomAppBarDemoState createState() => _BottomAppBarDemoState();
@@ -9,7 +13,15 @@ class _BottomAppBarDemoState extends State<BottomAppBarDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          //跳转
+//          Navigator.of(context)
+//              .push(MaterialPageRoute(builder: (BuildContext context) {
+//            return EachView('New2 Page');
+//          }));
+
+          Navigator.of(context).push(CustomRoute(FrostedGlassDemo()));
+        },
         tooltip: 'Increment',
         child: Icon(
           Icons.add,
